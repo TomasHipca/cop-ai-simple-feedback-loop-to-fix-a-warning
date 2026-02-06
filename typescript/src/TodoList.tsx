@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import type { TodoItem } from './TodoItem';
 import { todoService } from './TodoService';
 
 export function TodoList() {
-  const [items, setItems] = useState<TodoItem[]>([]);
+  const [items, setItems] = useState<TodoItem[]>(() => todoService.getAllItems());
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const unusedState = useState(false);
@@ -11,10 +11,6 @@ export function TodoList() {
   const refreshItems = () => {
     setItems(todoService.getAllItems());
   };
-
-  useEffect(() => {
-    refreshItems();
-  }, []);
 
   const handleAdd = (event: React.FormEvent) => {
     event.preventDefault();
