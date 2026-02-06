@@ -6,7 +6,6 @@ export function TodoList() {
   const [items, setItems] = useState<TodoItem[]>([]);
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-  const unusedState = useState(false);
 
   const refreshItems = () => {
     setItems(todoService.getAllItems());
