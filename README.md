@@ -7,6 +7,7 @@ Practice building AI systems that reduce pain by translating human intent into a
 These projects are exercises for practicing the setup of AI feedback loops. 
 
 - **[csharp/](csharp/)** - C# TodoApp with intentional warnings
+- **[java/](java/)** - Java TodoApp with intentional warnings
 - **[typescript/](typescript/)** - React + TypeScript + Vite with intentional warnings
 
 ## What you should do
